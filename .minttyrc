@@ -1,0 +1,11 @@
+Locale=zh_CN
+Charset=UTF-8
+Language=zh_CN
+
+CursorColour=255,0,0
+ThemeFile=dracula
+CursorType=block
+Transparency=low
+OpaqueWhenFocused=yes
+CursorBlinks=yes
+BellType=0
