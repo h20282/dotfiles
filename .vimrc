@@ -39,3 +39,9 @@ inoremap ] <ESC>:call RemoveNextDoubleChar(']')<CR>a
 inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
 " inoremap " <ESC>:call RemoveNextDoubleChar('"')<CR>a
 
+
+
+" 文件树
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
+
