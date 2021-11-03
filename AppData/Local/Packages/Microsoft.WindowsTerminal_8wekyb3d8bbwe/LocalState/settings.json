@@ -3,6 +3,14 @@
     "actions": 
     [
         {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+c"
+        },
+        {
             "command": "unbound",
             "keys": "ctrl+shift+w"
         },
@@ -11,12 +19,36 @@
             "keys": "ctrl+shift+t"
         },
         {
+            "command": "unbound",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+up"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+right"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "ctrl+f"
+        },
+        {
             "command": 
             {
-                "action": "copy",
-                "singleLine": false
+                "action": "moveFocus",
+                "direction": "up"
             },
-            "keys": "ctrl+c"
+            "keys": "alt+k"
         },
         {
             "command": 
@@ -32,12 +64,28 @@
         {
             "command": 
             {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+l"
+        },
+        {
+            "command": 
+            {
                 "action": "newWindow"
             }
         },
         {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+h"
+        },
+        {
             "command": "find",
-            "keys": "ctrl+shift+f"
+            "keys": "alt+f"
         },
         {
             "command": 
@@ -51,6 +99,14 @@
         {
             "command": "closePane",
             "keys": "ctrl+w"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "alt+j"
         }
     ],
     "alwaysShowTabs": false,
