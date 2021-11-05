@@ -16,7 +16,7 @@ autocmd BufNewFile *.cpp 0r ~/.vimfiles/template.cpp
 
 inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
-inoremap < <><Esc>i
+" inoremap < <><Esc>i
 inoremap { {}<Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
