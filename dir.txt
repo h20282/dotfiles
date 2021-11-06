@@ -1,7 +1,0 @@
-.minttyrc        ->    ~/.minttyrc
-NERD_tree.vim    ->    ~/.vim/plugin/NERD_tree.vim 
-a.vim            ->    ~/.vim/plugin/a.vim 
-template.cpp     ->    ~/.vimfiles/template.cpp 
-.vimrc           ->    ~/.vimrc
-settings.json    ->    ~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json 
-init.vim         ->    ~/AppData/Local/nvim/init.vim 
