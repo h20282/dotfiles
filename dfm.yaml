@@ -17,6 +17,9 @@ dotfiles:
   941b30d1b9151621491c82b8f0950a97/init.vim:
     windows:
       path: ~\AppData\Local\nvim\init.vim
+  ccfa602987093389c79998baa521439e/keybindings.json:
+    windows:
+      path: ~\AppData\Roaming\Code\User\keybindings.json
   f35ed2cd2c0390204425fcbebac3dba5/template.cpp:
     windows:
       path: ~\.vimfiles\template.cpp
