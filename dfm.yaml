@@ -3,15 +3,21 @@ dotfiles:
     windows:
       path: ~\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json
   2830e44423e99cda31c3d4185d8d0750/NERD_tree.vim:
+    linux:
+      path: ~/.vim/plugin/NERD_tree.vim
     windows:
       path: ~\.vim\plugin\NERD_tree.vim
   2830e44423e99cda31c3d4185d8d0750/a.vim:
+    linux:
+      path: ~/.vim/plugin/a.vim
     windows:
       path: ~\.vim\plugin\a.vim
   4c761f170e016836ff84498202b99827/.minttyrc:
     windows:
       path: ~\.minttyrc
   4c761f170e016836ff84498202b99827/.vimrc:
+    linux:
+      path: ~/.vimrc
     windows:
       path: ~\.vimrc
   941b30d1b9151621491c82b8f0950a97/init.vim:
