@@ -27,5 +27,7 @@ dotfiles:
     windows:
       path: ~\AppData\Roaming\Code\User\keybindings.json
   f35ed2cd2c0390204425fcbebac3dba5/template.cpp:
+    linux:
+      path: ~/.vimfiles/template.cpp
     windows:
       path: ~\.vimfiles\template.cpp
