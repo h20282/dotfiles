@@ -126,4 +126,7 @@ export PATH=$PATH:/home/ice/.local/bin
 
 # my aliases
 alias gst='git status'
+alias gdf='git diff'
+
+alias cmakeb='cmake --build ./'
 
