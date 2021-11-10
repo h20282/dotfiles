@@ -46,3 +46,4 @@ inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
 map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 
+map <F4> :A <CR>
