@@ -31,7 +31,7 @@ function! RemoveNextDoubleChar(char)
     if a:char == l:next_char
         execute "normal! l"
     else
-        execute "normal! i" . a:char . ""
+        execute "normal! a" . a:char . ""
     end
 endfunction
 
