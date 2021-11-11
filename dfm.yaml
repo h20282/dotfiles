@@ -34,8 +34,17 @@ dotfiles:
   ccfa602987093389c79998baa521439e/keybindings.json:
     windows:
       path: ~\AppData\Roaming\Code\User\keybindings.json
+  f26e82cee996b79c2482929832173b4e/autoload:
+    linux:
+      path: ~/.vim/autoload
   f35ed2cd2c0390204425fcbebac3dba5/template.cpp:
     linux:
       path: ~/.vimfiles/template.cpp
     windows:
       path: ~\.vimfiles\template.cpp
+  fd400e5abb640b86568030d59ffbb159/acp.vim:
+    linux:
+      path: ~/.vim/plugin/acp.vim
+  fd400e5abb640b86568030d59ffbb159/clang_format.vim:
+    linux:
+      path: ~/.vim/plugin/clang_format.vim
