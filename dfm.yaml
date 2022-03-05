@@ -31,6 +31,9 @@ dotfiles:
   941b30d1b9151621491c82b8f0950a97/init.vim:
     windows:
       path: ~\AppData\Local\nvim\init.vim
+  b036057cc962924abd62de51a07bad81/coc.vim:
+    windows:
+      path: ~\.vim\config\plugin\coc.vim
   ccfa602987093389c79998baa521439e/keybindings.json:
     windows:
       path: ~\AppData\Roaming\Code\User\keybindings.json
