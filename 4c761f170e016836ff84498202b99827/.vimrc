@@ -62,6 +62,8 @@ let g:clang_format#auto_format_on_insert_leave=0
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
+map <M-m> :MarkdownPreview<CR>
