@@ -64,6 +64,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'skywind3000/asyncrun.vim'
+" scoop install ripgrep
+Plug 'dyng/ctrlsf.vim'
+cnoreabbrev F CtrlsF
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
