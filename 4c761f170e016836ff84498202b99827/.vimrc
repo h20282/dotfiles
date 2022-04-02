@@ -69,6 +69,7 @@ Plug 'dyng/ctrlsf.vim'
 cnoreabbrev F CtrlSF
 let g:ctrlsf_backend='rg'
 map gf :CtrlSF <C-R><C-W><CR>
+map <F2> :CtrlSFToggle<CR>
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
