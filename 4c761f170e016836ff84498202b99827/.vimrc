@@ -66,7 +66,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'skywind3000/asyncrun.vim'
 " scoop install ripgrep
 Plug 'dyng/ctrlsf.vim'
-cnoreabbrev F CtrlsF
+cnoreabbrev F CtrlSF
+let g:ctrlsf_backend='rg'
+map gf :CtrlSF <C-R><C-W><CR>
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
