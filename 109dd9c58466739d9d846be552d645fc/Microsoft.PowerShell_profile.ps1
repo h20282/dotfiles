@@ -21,3 +21,7 @@ function cdc { cd c: }
 function gr($key) { 
     grep --color=auto -n -r $key
 }
+
+function findn($key) {
+    Get-ChildItem -r $key
+}
