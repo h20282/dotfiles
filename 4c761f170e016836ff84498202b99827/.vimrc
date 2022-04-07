@@ -63,7 +63,9 @@ let g:clang_format#auto_format_on_insert_leave=0
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 Plug 'skywind3000/asyncrun.vim'
 " scoop install ripgrep
 Plug 'dyng/ctrlsf.vim'
@@ -71,6 +73,10 @@ cnoreabbrev F CtrlSF
 let g:ctrlsf_backend='rg'
 map gf :CtrlSF <C-R><C-W><CR>
 map <F2> :CtrlSFToggle<CR>
+
+Plug 'ryanoasis/vim-devicons'
+
+Plug 'preservim/nerdtree'
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
