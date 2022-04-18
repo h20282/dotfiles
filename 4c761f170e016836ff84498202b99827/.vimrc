@@ -80,6 +80,9 @@ map <F2> :CtrlSFToggle<CR>
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'preservim/nerdtree'
+
+Plug 'APZelos/blamer.nvim'
+cnoreabbrev B BlamerToggle
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
