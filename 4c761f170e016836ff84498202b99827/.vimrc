@@ -58,6 +58,8 @@ map <F4> :A <CR>
 map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
 inoremap jk <ESC>
 map <C-k> :ClangFormat<CR>
+map <C-Right> <C-W>>
+map <C-Left> <C-W><
 let g:clang_format#auto_format_on_insert_leave=0
 
 
