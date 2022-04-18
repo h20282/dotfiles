@@ -52,8 +52,7 @@ imap {<CR> {}<ESC>i<CR><ESC>O
 let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格式化
 
 " 文件树
-map <F3> :NERDTreeMirror<CR>
-map <F3> :NERDTreeToggle<CR>
+map <F3> :NvimTreeToggle<CR>
 
 map <F4> :A <CR>
 map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
@@ -77,9 +76,8 @@ let g:ctrlsf_backend='rg'
 map gf :CtrlSF <C-R><C-W><CR>
 map <F2> :CtrlSFToggle<CR>
 
-Plug 'ryanoasis/vim-devicons'
-
-Plug 'preservim/nerdtree'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'APZelos/blamer.nvim'
 cnoreabbrev B BlamerToggle
@@ -87,3 +85,5 @@ cnoreabbrev B BlamerToggle
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
+
+lua require'nvim-tree'.setup {}
