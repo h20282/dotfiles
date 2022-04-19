@@ -83,9 +83,12 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'APZelos/blamer.nvim'
 cnoreabbrev B BlamerToggle
+
+Plug 'karb94/neoscroll.nvim'
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
 
 lua require'nvim-tree'.setup {}
+lua require'neoscroll'.setup {}
