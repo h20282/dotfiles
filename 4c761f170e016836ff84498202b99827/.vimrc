@@ -89,6 +89,12 @@ cnoreabbrev B BlamerToggle
 Plug 'psliwka/vim-smoothie'
 let g:smoothie_speed_linear_factor = 30
  
+if has("nvim")
+    Plug 'nvim-lua/plenary.nvim' | Plug 'nvim-telescope/telescope.nvim'
+    nnoremap <Space>f :Telescope find_files<CR>
+    nnoremap <Space>s :Telescope grep_string<CR>
+endif
+
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
