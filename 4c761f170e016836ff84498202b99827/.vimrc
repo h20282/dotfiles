@@ -72,6 +72,8 @@ let g:clang_format#auto_format_on_insert_leave=0
 " 插件
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-scripts/a.vim'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -104,7 +106,11 @@ let g:floaterm_autoclose=1
 let g:floaterm_autoinsert=1
 let g:floaterm_width=0.9
 let g:floaterm_height=0.9
-let g:floaterm_shell = 'powershell'
+if has('win32')
+    let g:floaterm_shell = 'powershell'
+else
+    let g:floaterm_shell = 'bash'
+endif
 let g:floaterm_keymap_toggle = '<c-n>'
 
 call plug#end()
