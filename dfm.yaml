@@ -28,6 +28,9 @@ dotfiles:
       path: ~/.vimrc
     windows:
       path: ~\.vimrc
+  4c761f170e016836ff84498202b99827/.zshrc:
+    linux:
+      path: ~/.zshrc
   941b30d1b9151621491c82b8f0950a97/init.vim:
     windows:
       path: ~\AppData\Local\nvim\init.vim
