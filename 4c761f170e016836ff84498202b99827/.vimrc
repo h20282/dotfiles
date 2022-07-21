@@ -34,6 +34,9 @@ inoremap { {}<Esc>i
 inoremap ' ''<Esc>i
 inoremap " ""<Esc>i
 
+" 复制到Windows剪切板
+vmap ;y : !/mnt/c/Windows/System32/clip.exe<cr>u''
+
 " from url: https://www.cnblogs.com/vactor/p/5046800.html
 " 输入一个字符时，如果下一个字符也是括号，则删除它，避免出现重复字符
 function! RemoveNextDoubleChar(char)
