@@ -2,7 +2,7 @@
 Import-Module posh-git
 
 function gst { git status }
-function gdf { git diff }
+function gd { git diff }
 function gcmi($msg){
     git commit -m $msg
 }
