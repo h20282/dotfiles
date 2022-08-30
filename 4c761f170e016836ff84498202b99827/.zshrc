@@ -12,7 +12,7 @@ antigen apply
 ZSH_THEME="agnoster"
 
 alias cls="clear"
-source ~/.oh-my-zsh/plugins/incr/incr*.zsh
+export PATH=$PATH:/home/ice/.local/bin
 
 function replace {
     find . -name '*.h' -or -name '*.cpp'  | xargs sed -i $1
