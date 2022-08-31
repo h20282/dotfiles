@@ -1,7 +1,12 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": 
     [
+        {
+            "command": "paste",
+            "keys": "ctrl+v"
+        },
         {
             "command": 
             {
@@ -9,6 +14,38 @@
                 "singleLine": false
             },
             "keys": "ctrl+c"
+        },
+        {
+            "command": "closePane",
+            "keys": "alt+w"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "right"
+            },
+            "keys": "alt+l"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 5
+            },
+            "keys": "ctrl+6"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "alt+k"
+        },
+        {
+            "command": "find",
+            "keys": "alt+f"
         },
         {
             "command": "unbound",
@@ -77,10 +114,10 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "up"
+                "action": "switchToTab",
+                "index": 2
             },
-            "keys": "alt+k"
+            "keys": "ctrl+3"
         },
         {
             "command": 
@@ -88,18 +125,6 @@
                 "action": "newTab"
             },
             "keys": "ctrl+t"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "alt+l"
         },
         {
             "command": 
@@ -110,14 +135,18 @@
         {
             "command": 
             {
+                "action": "switchToTab",
+                "index": 6
+            },
+            "keys": "ctrl+7"
+        },
+        {
+            "command": 
+            {
                 "action": "moveFocus",
                 "direction": "left"
             },
             "keys": "alt+h"
-        },
-        {
-            "command": "find",
-            "keys": "alt+f"
         },
         {
             "command": 
@@ -127,10 +156,6 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
-        },
-        {
-            "command": "closePane",
-            "keys": "alt+w"
         },
         {
             "command": 
@@ -160,14 +185,6 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 2
-            },
-            "keys": "ctrl+3"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
                 "index": 3
             },
             "keys": "ctrl+4"
@@ -179,22 +196,6 @@
                 "index": 4
             },
             "keys": "ctrl+5"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 5
-            },
-            "keys": "ctrl+6"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 6
-            },
-            "keys": "ctrl+7"
         },
         {
             "command": 
@@ -227,7 +228,6 @@
         "list": 
         [
             {
-                "commandline": "powershell.exe",
                 "cursorShape": "filledBox",
                 "font": 
                 {
@@ -241,7 +241,6 @@
                 "startingDirectory": null
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
@@ -254,6 +253,7 @@
             },
             {
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": true,
                 "name": "Ubuntu-20.04",
                 "source": "Windows.Terminal.Wsl"
             }
@@ -444,6 +444,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
+        },
+        {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-20.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
         },
         {
             "background": "#000000",
