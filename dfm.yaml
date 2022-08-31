@@ -47,6 +47,16 @@ dotfiles:
   f26e82cee996b79c2482929832173b4e/autoload:
     linux:
       path: ~/.vim/autoload
+  f35ed2cd2c0390204425fcbebac3dba5/CMakeLists.txt:
+    linux:
+      path: ~/.vimfiles/CMakeLists.txt
+    windows:
+      path: ~\.vimfiles\CMakeLists.txt
+  f35ed2cd2c0390204425fcbebac3dba5/conanfile.txt:
+    linux:
+      path: ~/.vimfiles/conanfile.txt
+    windows:
+      path: ~\.vimfiles\conanfile.txt
   f35ed2cd2c0390204425fcbebac3dba5/template.cpp:
     linux:
       path: ~/.vimfiles/template.cpp
