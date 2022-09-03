@@ -27,10 +27,6 @@ autocmd BufNewFile conanfile.txt 0r ~/.vimfiles/conanfile.txt
 autocmd BufNewFile CMakeLists.txt 0r ~/.vimfiles/CMakeLists.txt
 
 
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-" inoremap < <><Esc>i
-inoremap { {}<Esc>i
 
 " 复制到Windows剪切板
 vmap ;y : !/mnt/c/Windows/System32/clip.exe<cr>u''
@@ -44,19 +40,35 @@ function! RemoveNextDoubleChar(curr_char)
         execute "normal! l"
     else
         execute "normal! a" . a:curr_char . ""
-        if (a:curr_char=="'" || a:curr_char=='"')
-            execute "normal! a" . a:curr_char . ""
-            execute "normal! h"
-        end
     end
 endfunction
 
+function! OnQuotation(curr_char)
+    let l:next_char = getline(".")[col(".")] " 取得当前光标后一个字符
+
+    if a:curr_char == l:next_char
+        execute "normal! l"
+    else
+        if col(".") == 1
+            execute "normal! i" . a:curr_char . a:curr_char 
+        else
+            execute "normal! a" . a:curr_char . a:curr_char 
+        end
+        execute "normal h"
+    end
+endfunction
+
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+inoremap { {}<Esc>i
 inoremap ) <ESC>:call RemoveNextDoubleChar(')')<CR>a
 inoremap ] <ESC>:call RemoveNextDoubleChar(']')<CR>a
 inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
+
+inoremap " <ESC>:call OnQuotation('"')<CR>a
+inoremap ' <ESC>:call OnQuotation("'")<CR>a
+
 imap {<CR> {}<ESC>i<CR><ESC>O
-inoremap " <ESC>:call RemoveNextDoubleChar('"')<CR>a
-inoremap ' <ESC>:call RemoveNextDoubleChar("'")<CR>a
 
 let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格式化
 
