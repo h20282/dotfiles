@@ -19,6 +19,6 @@ function replace {
 }
 
 if [ ! -f ~/z.sh ]; then
-    wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+    wget -O ~/z.sh https://raw.githubusercontent.com/rupa/z/master/z.sh
 fi
 source ~/z.sh
