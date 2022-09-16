@@ -1,4 +1,4 @@
-if [ ! -f ~/.zsh ]; then
+if [ ! -d ~/.zsh ]; then
     mkdir ~/.zsh
 fi
 
