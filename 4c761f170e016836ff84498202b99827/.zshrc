@@ -1,3 +1,10 @@
+if [ ! -f ~/.zsh ]; then
+    mkdir ~/.zsh
+fi
+
+if [ ! -f ~/.zsh/antigen.zsh ]; then
+    curl -L git.io/antigen > ~/.zsh/antigen.zsh
+fi
 source ~/.zsh/antigen.zsh
 
 antigen use oh-my-zsh
