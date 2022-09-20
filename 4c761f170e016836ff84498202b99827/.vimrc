@@ -78,6 +78,8 @@ map <F3> :NvimTreeToggle<CR>
 map <F4> :A <CR>
 map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
 inoremap jk <ESC>
+nnoremap H ^
+nnoremap L $
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 map <C-k> :ClangFormat<CR>
