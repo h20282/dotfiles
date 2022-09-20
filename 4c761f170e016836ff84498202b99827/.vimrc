@@ -82,7 +82,7 @@ nnoremap H ^
 nnoremap L $
 map <C-h> <C-w>h
 map <C-l> <C-w>l
-map <C-k> :ClangFormat<CR>
+map <C-k> :call CocAction("format")<CR>
 map <C-Right> <C-W>>
 map <C-Left> <C-W><
 let g:clang_format#auto_format_on_insert_leave=0
