@@ -85,6 +85,15 @@ map <C-l> <C-w>l
 map <C-k> :call CocAction("format")<CR>
 map <C-Right> <C-W>>
 map <C-Left> <C-W><
+
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-h> <Left>
+cnoremap <C-l> <Right>
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+
+
 let g:clang_format#auto_format_on_insert_leave=0
 
 
