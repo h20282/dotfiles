@@ -146,6 +146,8 @@ Plug 'tpope/vim-surround'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
+Plug 'peterhoeg/vim-qml'
+
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
