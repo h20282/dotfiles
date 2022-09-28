@@ -23,6 +23,11 @@ dotfiles:
   4c761f170e016836ff84498202b99827/.minttyrc:
     windows:
       path: ~\.minttyrc
+  4c761f170e016836ff84498202b99827/.project_template:
+    linux:
+      path: ~/.project_template
+    windows:
+      path: ~\.project_template
   4c761f170e016836ff84498202b99827/.vimrc:
     linux:
       path: ~/.vimrc
