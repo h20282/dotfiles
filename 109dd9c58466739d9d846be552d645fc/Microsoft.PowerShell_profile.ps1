@@ -28,7 +28,7 @@ function gcma(){
     git commit -a;
 }
 
-function cmkb { cmake --build ./ }
+function make { cmake --build ./ }
 
 function cdd { cd d: }
 function cdc { cd c: }
