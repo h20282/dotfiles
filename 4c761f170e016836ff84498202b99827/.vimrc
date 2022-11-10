@@ -130,6 +130,9 @@ Plug 'morhetz/gruvbox'
 
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'voldikss/vim-translator'
+nmap <C-T> :Translate<CR>
+
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
