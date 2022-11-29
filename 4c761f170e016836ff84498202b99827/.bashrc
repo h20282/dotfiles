@@ -138,4 +138,4 @@ if [ ! -f ~/git-prompt.sh ]; then
     wget -O ~/git-prompt.sh https://raw.githubusercontent.com/lyze/posh-git-sh/master/git-prompt.sh 
 fi
 source ~/git-prompt.sh
-export PROMPT_COMMAND=$PROMPT_COMMAND'__posh_git_ps1 "\u@\h:\w " "\\\$ ";'
+export PROMPT_COMMAND='__posh_git_ps1 "\033[0;92m\u@\h\033[0m:\033[01;34m\w\033[0m " "\\\$ ";'
