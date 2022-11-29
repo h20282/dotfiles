@@ -128,6 +128,13 @@ let g:VM_maps["Select All"] = '\a'
 
 Plug 'morhetz/gruvbox'
 
+Plug 'Yggdroot/indentLine'
+
+Plug 'frazrepo/vim-rainbow'
+let g:rainbow_active = 1
+
+"Plug 'sheerun/vim-polyglot'
+
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'voldikss/vim-translator'
