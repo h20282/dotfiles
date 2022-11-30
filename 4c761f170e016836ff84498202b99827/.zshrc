@@ -30,3 +30,7 @@ if [ ! -f ~/z.sh ]; then
     wget -O ~/z.sh https://raw.githubusercontent.com/rupa/z/master/z.sh
 fi
 source ~/z.sh
+source ~/git-prompt.sh
+
+# https://stackoverflow.com/questions/38136266/how-to-use-posh-git-bash-in-oh-my-zsh
+RPROMPT='$(__posh_git_echo)'
