@@ -130,6 +130,7 @@ alias gd='git diff'
 alias glg='git log --oneline -n 10'
 alias gaa='git add --all'
 alias gds='git diff --staged'
+alias amend='git commit --amend'
 
 alias cmkb='cmake --build ./'
 
