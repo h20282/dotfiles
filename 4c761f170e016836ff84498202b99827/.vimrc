@@ -14,6 +14,7 @@ set autoindent
 set mouse=a
 
 set noswapfile
+set nowrap "不换行
 let g:auto_save=1
 let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI", "CursorHoldI", "CompleteDone"]
 
