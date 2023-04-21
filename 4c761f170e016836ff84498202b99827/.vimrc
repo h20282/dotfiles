@@ -15,6 +15,8 @@ set mouse=a         " 鼠标支持
 set noswapfile      " 无.swap
 set nowrap          " 不换行
 
+set colorcolumn=81 " 突出显示第81列
+
 let g:auto_save=1
 let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI", "CursorHoldI", "CompleteDone"]
 
