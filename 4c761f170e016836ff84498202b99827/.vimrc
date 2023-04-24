@@ -107,7 +107,8 @@ endif
 Plug 'voldikss/vim-floaterm'
 let g:floaterm_autoclose=1
 let g:floaterm_autoinsert=1
-let g:floaterm_width=0.9
+let g:floaterm_wintype="vsplit"
+let g:floaterm_width=0.6
 let g:floaterm_height=0.9
 if has('win32')
     let g:floaterm_shell = 'powershell'
