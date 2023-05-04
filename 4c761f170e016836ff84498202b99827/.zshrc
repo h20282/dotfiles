@@ -22,6 +22,7 @@ ZSH_THEME="agnoster"
 
 alias cls="clear"
 alias gz="tar -xvzf"
+alias make="make -j$(nproc)"
 export PATH=$PATH:/home/ice/.local/bin
 
 function replace {
