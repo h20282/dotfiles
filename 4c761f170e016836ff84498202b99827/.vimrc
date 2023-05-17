@@ -94,7 +94,7 @@ Plug 'APZelos/blamer.nvim'
 cnoreabbrev B BlamerToggle
 
 Plug 'psliwka/vim-smoothie'
-let g:smoothie_speed_linear_factor = 30
+let g:smoothie_speed_linear_factor = 20
  
 if has("nvim")
     Plug 'nvim-lua/plenary.nvim' | Plug 'nvim-telescope/telescope.nvim'
