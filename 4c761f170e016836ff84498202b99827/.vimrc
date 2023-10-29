@@ -184,6 +184,9 @@ nmap <M-b> :call vimspector#ToggleBreakpoint()<CR>
 nmap <M-c> :call vimspector#Continue()<CR>
 nmap <M-r> :call vimspector#Reset()<CR>
 
+Plug 'jakar/vim-python-syntax'
+let python_highlight_all = 1
+
 call plug#end()
 if has_key(plugs, 'coc.nvim')
     source ~/.vim/config/plugin/coc.vim
