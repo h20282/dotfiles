@@ -8,15 +8,11 @@ let g:coc_global_extensions=[
             \ 'coc-diagnostic',
             \ 'coc-clang-format-style-options',
             \ 'coc-vimlsp',
-            \ 'coc-sh',
             \ 'coc-pyright',
             \ 'coc-json',
-            \ 'coc-go',
-            \ 'coc-css',
             \ 'coc-cmake',
             \ 'coc-clangd',
             \ 'coc-explorer',
-            \ 'coc-java'
             \]
 
 
