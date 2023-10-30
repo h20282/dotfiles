@@ -11,6 +11,10 @@ function glg($num_log) {
     git log --oneline -n $num_log
 }
 
+function gds(){
+    git diff --staged $args
+}
+
 function amend(){
     git commit --amend
 }
