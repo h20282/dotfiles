@@ -1,17 +1,26 @@
 #include <iostream>
 
-inline void print(const char *f) {
+template <typename T>
+inline void print(T f) {
     std::cout << f;
 }
 
 template <typename First, typename... Rest>
 inline void print(const char *format, const First &first, const Rest &...rest) {
-    if (*format == '\0') { return; }
+    if (*format == '\0') {
+        return;
+    }
     while (*format && !(format[0] == '{' && (format[1] == '}'))) {
         putchar(*format++);
     }
     std::cout << first;
     print(format + 2, rest...);
+}
+
+template <typename... Args>
+inline void println(const Args &...args) {
+    print(args...);
+    print('\n');
 }
 
 int main() {
