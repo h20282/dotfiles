@@ -139,6 +139,7 @@ autocmd FileType c,cpp setlocal commentstring=//\ %s
 Plug 'airblade/vim-gitgutter'
 nmap gu :GitGutterUndoHunk<CR>
 nmap gt :GitGutterLineHighlightsToggle<CR>
+nmap gs :GitGutterStageHunk<CR>
 nmap gn :GitGutterNextHunk<CR>
 nmap gN :GitGutterPrevHunk<CR>
 set updatetime=100
