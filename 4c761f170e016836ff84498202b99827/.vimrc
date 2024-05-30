@@ -96,6 +96,9 @@ Plug 'kyazdani42/nvim-tree.lua'
 
 " git blamer
 Plug 'APZelos/blamer.nvim'
+let g:blamer_prefix = '<- '
+let g:blamer_date_format = '%Y-%m-%d'
+let g:blamer_template = '<committer> <commit-short> <committer-time> <summary>'
 cnoreabbrev B BlamerToggle
 
 Plug 'psliwka/vim-smoothie'
