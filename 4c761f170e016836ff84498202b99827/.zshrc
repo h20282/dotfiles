@@ -21,6 +21,7 @@ antigen apply
 ZSH_THEME="agnoster"
 
 alias cls="clear"
+alias amend='git commit --amend'
 alias gz="tar -xvzf"
 alias make="make -j$(nproc)"
 export PATH=$PATH:/home/ice/.local/bin
