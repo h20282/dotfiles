@@ -15,7 +15,41 @@ set mouse=a         " 鼠标支持
 set noswapfile      " 无.swap
 set nowrap          " 不换行
 
-set colorcolumn=81 " 突出显示第81列
+set colorcolumn=81 " 默认突出显示第81列
+
+function! ReadClangFormatColumnLimit()
+    " 获取当前文件的目录
+    let l:current_file = expand('%:p')
+    let l:dirname = fnamemodify(l:current_file, ':h')
+
+    " 拼接 .clang-format 文件的路径
+    let l:clang_format_file = l:dirname . '/.clang-format'
+
+    " 检查文件是否存在
+    if !filereadable(l:clang_format_file)
+        echomsg "Error: .clang-format file not found."
+        return
+    endif
+
+    " 读取 .clang-format 文件内容
+    let l:clang_format_content = readfile(l:clang_format_file)
+
+    " 查找 ColumnLimit 的值
+    for l:line in l:clang_format_content
+        if l:line =~ 'ColumnLimit'
+            let l:column_limit = matchstr(l:line, '\d\+')
+            echomsg "ColumnLimit found: " . l:column_limit
+            let l:column_limit = l:column_limit+1
+            execute 'set colorcolumn=' . l:column_limit
+            return
+        endif
+    endfor
+
+    echomsg "ColumnLimit not found"
+endfunction
+" 设置colorcolumn为 .clang-format 中的 ColumnLimit+1
+call ReadClangFormatColumnLimit()
+
 
 let g:auto_save=1
 let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI", "CursorHoldI", "CompleteDone"]
