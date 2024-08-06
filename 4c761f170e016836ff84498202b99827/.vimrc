@@ -230,6 +230,9 @@ nmap <M-r> :call vimspector#Reset()<CR>
 Plug 'jakar/vim-python-syntax'
 let python_highlight_all = 1
 
+Plug 'fidian/hexmode'
+let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.png,*.jpg,*.wav,*.pcm,*.obj,*.dll'
+
 call plug#end()
 if has_key(plugs, 'coc.nvim')
     source ~/.vim/config/plugin/coc.vim
