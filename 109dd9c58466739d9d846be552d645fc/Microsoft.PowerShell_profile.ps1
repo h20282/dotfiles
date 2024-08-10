@@ -55,3 +55,5 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+RightArrow" -Function ForwardWord
+
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
