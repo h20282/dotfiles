@@ -15,6 +15,8 @@ set mouse=a         " 鼠标支持
 set noswapfile      " 无.swap
 set nowrap          " 不换行
 
+set shada="NONE"    " 禁用 shada file https://vi.stackexchange.com/questions/9570/how-do-i-shadont
+
 set colorcolumn=81 " 默认突出显示第81列
 
 function! ReadClangFormatColumnLimit()
