@@ -31,22 +31,23 @@ inoremap ( ()<Esc>i
 inoremap [ []<Esc>i
 " inoremap < <><Esc>i
 inoremap { {}<Esc>i
-inoremap ' ''<Esc>i
-inoremap " ""<Esc>i
 
 " 复制到Windows剪切板
 vmap ;y : !/mnt/c/Windows/System32/clip.exe<cr>u''
 
-" from url: https://www.cnblogs.com/vactor/p/5046800.html
+" 参考 https://www.cnblogs.com/vactor/p/5046800.html
 " 输入一个字符时，如果下一个字符也是括号，则删除它，避免出现重复字符
-function! RemoveNextDoubleChar(char)
-    let l:line = getline(".")
-    let l:next_char = l:line[col(".")] " 取得当前光标后一个字符
+function! RemoveNextDoubleChar(curr_char)
+    let l:next_char = getline(".")[col(".")] " 取得当前光标后一个字符
      
-    if a:char == l:next_char
+    if a:curr_char == l:next_char
         execute "normal! l"
     else
-        execute "normal! a" . a:char . ""
+        execute "normal! a" . a:curr_char . ""
+        if (a:curr_char=="'" || a:curr_char=='"')
+            execute "normal! a" . a:curr_char . ""
+            execute "normal! h"
+        end
     end
 endfunction
 
@@ -54,7 +55,8 @@ inoremap ) <ESC>:call RemoveNextDoubleChar(')')<CR>a
 inoremap ] <ESC>:call RemoveNextDoubleChar(']')<CR>a
 inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
 imap {<CR> {}<ESC>i<CR><ESC>O
-" inoremap " <ESC>:call RemoveNextDoubleChar('"')<CR>a
+inoremap " <ESC>:call RemoveNextDoubleChar('"')<CR>a
+inoremap ' <ESC>:call RemoveNextDoubleChar("'")<CR>a
 
 let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格式化
 
