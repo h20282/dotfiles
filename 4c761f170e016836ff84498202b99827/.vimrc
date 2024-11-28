@@ -174,14 +174,29 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'voldikss/vim-translator'
 nmap <C-T> :Translate<CR>
 
+" vim-debugger
+Plug 'puremourning/vimspector'
+nmap <M-i> :call vimspector#StepInto()<CR>
+nmap <M-o> :call vimspector#StepOut()<CR>
+nmap <M-l> :call vimspector#Launch()<CR>
+nmap <M-b> :call vimspector#ToggleBreakpoint()<CR>
+nmap <M-c> :call vimspector#Continue()<CR>
+nmap <M-r> :call vimspector#Reset()<CR>
+
 call plug#end()
-source ~/.vim/config/plugin/coc.vim
+if has_key(plugs, 'coc.nvim')
+    source ~/.vim/config/plugin/coc.vim
+endif
 map <M-m> :MarkdownPreview<CR>
 
-lua require'nvim-tree'.setup {}
+if has("nvim")
+    lua require'nvim-tree'.setup {}
+endif
 
 set termguicolors
 " -- Attaches to every FileType mode
 cnoreabbrev C ColorizerToggle
-lua require'colorizer'.setup {}
+if has("nvim")
+    lua require'colorizer'.setup {}
+endif
 colo gruvbox
