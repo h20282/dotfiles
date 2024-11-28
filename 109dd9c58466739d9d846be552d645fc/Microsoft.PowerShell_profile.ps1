@@ -1,5 +1,18 @@
 ﻿<# 
-too install, run:
+to install, run:
+
+install socop:
+
+```powershell
+# copy from https://www.scoop.sh
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+```
+
+scoop install PSReadLine
+scoop install posh-git
+
+or by powershell
 
 install-Module PSReadLine -Scope CurrentUser -Force
 install-Module posh-git -Scope CurrentUser -Force
