@@ -1,6 +1,5 @@
 ﻿
-Import-Module 'D:\posh-git\src\posh-git.psd1'
-
+Import-Module posh-git
 
 function gst { git status }
 function gdf { git diff }
