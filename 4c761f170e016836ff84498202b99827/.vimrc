@@ -63,6 +63,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'skywind3000/asyncrun.vim'
  
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
