@@ -28,6 +28,10 @@ function gcma(){
     git commit -a;
 }
 
+function amend(){
+    git commit --amend
+}
+
 function conaninse {conan install .. -o example=True}
 
 function cmakeE {cmake .. -DBUILD_EXAMPLE=1}
