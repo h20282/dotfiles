@@ -3,7 +3,12 @@ Import-Module posh-git
 
 function gst { git status }
 function gdf { git diff }
-function glg { git log --oneline}
+function glg($num_log) {
+    if ($num_log -eq $null) {
+        $num_log = 10;
+    }
+    git log --oneline -n $num_log
+}
 
 function cmkb { cmake --build ./ }
 
