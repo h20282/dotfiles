@@ -19,6 +19,7 @@ antigen apply
 ZSH_THEME="agnoster"
 
 alias cls="clear"
+alias gz="tar -xvzf"
 export PATH=$PATH:/home/ice/.local/bin
 
 function replace {
