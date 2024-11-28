@@ -40,7 +40,7 @@ endfunction
 inoremap ) <ESC>:call RemoveNextDoubleChar(')')<CR>a
 inoremap ] <ESC>:call RemoveNextDoubleChar(']')<CR>a
 inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
-imap {<CR> {}<ESC>i<CR><ESC>O<Tab>
+imap {<CR> {}<ESC>i<CR><ESC>O
 " inoremap " <ESC>:call RemoveNextDoubleChar('"')<CR>a
 
 let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格式化
