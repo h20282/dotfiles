@@ -198,7 +198,7 @@ endif
 map <M-m> :MarkdownPreview<CR>
 
 if has("nvim")
-    lua require'nvim-tree'.setup {}
+    lua require'nvim-tree'.setup { actions = { open_file = { resize_window = false } } }
 endif
 
 set termguicolors
