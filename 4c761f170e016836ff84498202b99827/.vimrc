@@ -13,6 +13,10 @@ set expandtab
 set autoindent
 set mouse=a
 
+set noswapfile
+let g:auto_save=1
+let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI", "CursorHoldI", "CompleteDone"]
+
 set clipboard+=unnamedplus
 
 
@@ -94,6 +98,12 @@ if has("nvim")
     nnoremap <Space>f :Telescope find_files<CR>
     nnoremap <Space>s :Telescope grep_string<CR>
 endif
+
+Plug 'voldikss/vim-floaterm'
+let g:floaterm_autoclose=1
+let g:floaterm_autoinsert=1
+let g:floaterm_shell = 'powershell'
+let g:floaterm_keymap_toggle = '<c-n>'
 
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
