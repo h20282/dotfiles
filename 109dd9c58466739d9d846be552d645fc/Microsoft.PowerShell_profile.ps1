@@ -4,6 +4,8 @@ Import-Module VSSetup
 Import-Module Pscx
 Import-Module PSReadLine
 
+Import-VisualStudioVars
+
 function glg($num_log) {
     if ($num_log -eq $null) {
         $num_log = 10;
