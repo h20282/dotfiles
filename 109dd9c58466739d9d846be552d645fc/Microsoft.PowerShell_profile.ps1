@@ -1,10 +1,22 @@
-﻿
+﻿<# 
+too install, run:
+
+install-Module PSReadLine -Scope CurrentUser -Force
+install-Module posh-git -Scope CurrentUser -Force
+install-Module ... -Scope CurrentUser -Force
+#>
+
 Import-Module posh-git
-Import-Module VSSetup
-Import-Module Pscx
 Import-Module PSReadLine
 
-Import-VisualStudioVars
+# theme
+# Import-Module oh-my-posh
+# Set-Theme Agnoster
+
+# this is too slow
+# Import-Module VSSetup
+# Import-Module Pscx
+# Import-VisualStudioVars
 
 function glg($num_log) {
     if ($num_log -eq $null) {
@@ -25,7 +37,13 @@ function conaninse {conan install .. -o example=True}
 
 function cmakeE {cmake .. -DBUILD_EXAMPLE=1}
 
-function make { cmake --build ./ }
+function make {
+    if (Get-Command "cl" -errorAction SilentlyContinue) {
+    }else{
+        Import-VisualStudioVars;
+    }
+    cmake --build ./ 
+}
 
 function cdd { cd d: }
 function cdc { cd c: }
