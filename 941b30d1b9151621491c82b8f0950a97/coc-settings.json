@@ -1,0 +1,9 @@
+{
+    "clangd.compilationDatabaseCandidates": [
+        "build/.qtc_clangd",
+        "build"
+    ],
+    "inlayHint.enable": false,
+    "clangd.path": "~\\scoop\\shims\\clangd.exe",
+    "suggest.noselect": true
+}
