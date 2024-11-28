@@ -12,6 +12,11 @@ dotfiles:
       path: ~/.vim/plugin/a.vim
     windows:
       path: ~\.vim\plugin\a.vim
+  4c761f170e016836ff84498202b99827/.bashrc:
+    linux:
+      path: ~/.bashrc
+    windows:
+      path: ~\.bashrc
   4c761f170e016836ff84498202b99827/.minttyrc:
     windows:
       path: ~\.minttyrc
