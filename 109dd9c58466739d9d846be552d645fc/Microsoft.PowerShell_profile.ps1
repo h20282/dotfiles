@@ -13,6 +13,10 @@ function glg($num_log) {
     git log --oneline -n $num_log
 }
 
+function gcma(){
+    git commit -a;
+}
+
 function cmkb { cmake --build ./ }
 
 function cdd { cd d: }
