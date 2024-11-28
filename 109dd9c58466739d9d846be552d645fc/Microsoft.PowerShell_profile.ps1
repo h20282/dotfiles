@@ -40,3 +40,12 @@ function gr($key) {
 function findn($key) {
     Get-ChildItem -r $key
 }
+
+$zlua_path = Join-Path $HOME "z.lua"
+$zlua_url = "https://raw.githubusercontent.com/skywind3000/z.lua/master/z.lua"
+if (!(Test-Path($zlua_path)))
+{
+    Invoke-WebRequest $zlua_url -OutFile $zlua_path
+}
+
+Invoke-Expression (& { (lua $zlua_path --init powershell) -join "`n" })
