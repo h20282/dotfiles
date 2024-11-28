@@ -36,7 +36,6 @@ let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格
 " 文件树
 map <F3> :NvimTreeToggle<CR>
 
-map <F4> :A <CR>
 map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
 inoremap jk <ESC>
 vnoremap H ^
@@ -60,7 +59,8 @@ cnoremap <C-e> <End>
 " 插件
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-scripts/a.vim'
+Plug 'vim-scripts/a.vim' " F4 switch header/cpp
+map <F4> :A <CR>
 
 Plug 'neoclide/coc.nvim', {'tag': 'v0.0.81'}
 
@@ -104,7 +104,7 @@ let g:floaterm_keymap_toggle = '<c-q>'
 
 Plug 'tpope/vim-surround'
 
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'norcalli/nvim-colorizer.lua' " 显示颜色 #fff
 
 Plug 'peterhoeg/vim-qml'
 
