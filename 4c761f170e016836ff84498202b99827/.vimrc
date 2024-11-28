@@ -1,25 +1,22 @@
-set hls
-set nu
 hi MatchParen ctermbg=Blue guibg=lightblue
 hi Search ctermbg=220
 
 set fencs=utf-8,gbk,utf-16,utf-32,ucs-bom
-
-
-set ts=4
-set softtabstop=4
-set shiftwidth=4
+set hls
+set nu
+" 缩进相关
+set ts=4            " 
+set softtabstop=4   " tab 空格数量
+set shiftwidth=4    " 自动缩进空格数量
 set expandtab
 set autoindent
-set mouse=a
 
-set noswapfile
-set nowrap "不换行
+set mouse=a         " 鼠标支持
+set noswapfile      " 无.swap
+set nowrap          " 不换行
+
 let g:auto_save=1
 let g:auto_save_events = ["InsertLeave", "TextChanged", "TextChangedI", "CursorHoldI", "CompleteDone"]
-
-set clipboard+=unnamedplus
-
 
 colo desert
 
@@ -27,8 +24,8 @@ autocmd BufNewFile *.cpp 0r ~/.vimfiles/template.cpp
 autocmd BufNewFile conanfile.txt 0r ~/.vimfiles/conanfile.txt
 autocmd BufNewFile CMakeLists.txt 0r ~/.vimfiles/CMakeLists.txt
 
-
-
+" 绑定 Vim剪贴板 和 系统剪贴板 
+set clipboard+=unnamedplus
 " 复制到Windows剪切板
 vmap ;y : !/mnt/c/Windows/System32/clip.exe<cr>u''
 
@@ -38,6 +35,7 @@ let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格
 map <F3> :NvimTreeToggle<CR>
 
 map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
+
 inoremap jk <ESC>
 vnoremap H ^
 vnoremap L $
@@ -60,24 +58,33 @@ cnoremap <C-e> <End>
 " 插件
 call plug#begin('~/.vim/plugged')
 
-Plug 'vim-scripts/a.vim' " F4 switch header/cpp
+" switch header/cpp
+Plug 'vim-scripts/a.vim' 
 map <F4> :A <CR>
 
+" code completion
 Plug 'neoclide/coc.nvim', {'tag': 'v0.0.81'}
 
+" markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'skywind3000/asyncrun.vim'
-" scoop install ripgrep
+
+" search string
+" note: scoop install ripgrep
 Plug 'dyng/ctrlsf.vim'
 cnoreabbrev F CtrlSF
 let g:ctrlsf_backend='rg'
 map gf :CtrlSF <C-R><C-W><CR>
 map <F2> :CtrlSFToggle<CR>
 
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
+" for file icons 
+Plug 'kyazdani42/nvim-web-devicons'
+
+" file tree
 Plug 'kyazdani42/nvim-tree.lua'
 
+" git blamer
 Plug 'APZelos/blamer.nvim'
 cnoreabbrev B BlamerToggle
 
@@ -91,6 +98,7 @@ if has("nvim")
     nnoremap <Space><Space> :Telescope<CR>
 endif
 
+" floating terminal
 Plug 'voldikss/vim-floaterm'
 let g:floaterm_autoclose=1
 let g:floaterm_autoinsert=1
@@ -103,41 +111,58 @@ else
 endif
 let g:floaterm_keymap_toggle = '<c-q>'
 
+" 
 Plug 'tpope/vim-surround'
 
-Plug 'norcalli/nvim-colorizer.lua' " 显示颜色 #fff
+" show color of `#fff`
+Plug 'norcalli/nvim-colorizer.lua'
 
+" qml highlight
 Plug 'peterhoeg/vim-qml'
 
+" Comment/Uncomment
 Plug 'tpope/vim-commentary'
 
 Plug 'airblade/vim-gitgutter'
 nmap gu :GitGutterUndoHunk<CR>
+nmap gt :GitGutterLineHighlightsToggle<CR>
+nmap gn :GitGutterNextHunk<CR>
+nmap gN :GitGutterPrevHunk<CR>
 set updatetime=100
 
-Plug 'tpope/vim-fugitive'
+" " maybe not used
+" Plug 'tpope/vim-fugitive'
+
+" view git history
 Plug 'junegunn/gv.vim'
 
-Plug 'easymotion/vim-easymotion'
-nmap gs <Plug>(easymotion-s2)
+"" 
+"Plug 'easymotion/vim-easymotion'
+"nmap gs <Plug>(easymotion-s2)
 
+" multi edit cursor 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 let g:VM_theme='olive'
 let g:VM_leader='\'
 let g:VM_maps = {}
 let g:VM_maps["Select All"] = '\a'
 
+" Theme
 Plug 'morhetz/gruvbox'
 
+" 缩进线
 Plug 'Yggdroot/indentLine'
 
+" 彩虹括号
 Plug 'frazrepo/vim-rainbow'
 let g:rainbow_active = 1
 
 "Plug 'sheerun/vim-polyglot'
 
+" 括号对
 Plug 'jiangmiao/auto-pairs'
 
+" translator
 Plug 'voldikss/vim-translator'
 nmap <C-T> :Translate<CR>
 
