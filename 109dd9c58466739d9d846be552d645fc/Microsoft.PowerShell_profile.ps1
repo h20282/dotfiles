@@ -3,6 +3,9 @@ Import-Module posh-git
 
 function gst { git status }
 function gdf { git diff }
+function gcmi($msg){
+    git commit -m $msg
+}
 function glg($num_log) {
     if ($num_log -eq $null) {
         $num_log = 10;
