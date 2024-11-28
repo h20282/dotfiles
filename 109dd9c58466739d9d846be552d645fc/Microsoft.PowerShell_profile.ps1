@@ -4,6 +4,7 @@ Import-Module 'D:\posh-git\src\posh-git.psd1'
 
 function gst { git status }
 function gdf { git diff }
+function glg { git log --oneline}
 
 function cmkb { cmake --build ./ }
 
