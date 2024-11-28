@@ -31,45 +31,6 @@ autocmd BufNewFile CMakeLists.txt 0r ~/.vimfiles/CMakeLists.txt
 " 复制到Windows剪切板
 vmap ;y : !/mnt/c/Windows/System32/clip.exe<cr>u''
 
-" 参考 https://www.cnblogs.com/vactor/p/5046800.html
-" 输入一个字符时，如果下一个字符也是括号，则删除它，避免出现重复字符
-function! RemoveNextDoubleChar(curr_char)
-    let l:next_char = getline(".")[col(".")] " 取得当前光标后一个字符
-     
-    if a:curr_char == l:next_char
-        execute "normal! l"
-    else
-        execute "normal! a" . a:curr_char . ""
-    end
-endfunction
-
-function! OnQuotation(curr_char)
-    let l:next_char = getline(".")[col(".")] " 取得当前光标后一个字符
-
-    if a:curr_char == l:next_char
-        execute "normal! l"
-    else
-        if col(".") == 1
-            execute "normal! i" . a:curr_char . a:curr_char 
-        else
-            execute "normal! a" . a:curr_char . a:curr_char 
-        end
-        execute "normal h"
-    end
-endfunction
-
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {}<Esc>i
-inoremap ) <ESC>:call RemoveNextDoubleChar(')')<CR>a
-inoremap ] <ESC>:call RemoveNextDoubleChar(']')<CR>a
-inoremap } <ESC>:call RemoveNextDoubleChar('}')<CR>a
-
-inoremap " <ESC>:call OnQuotation('"')<CR>a
-inoremap ' <ESC>:call OnQuotation("'")<CR>a
-
-imap {<CR> {}<ESC>i<CR><ESC>O
-
 let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格式化
 
 " 文件树
@@ -94,9 +55,6 @@ cnoremap <C-h> <Left>
 cnoremap <C-l> <Right>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
-
-
-let g:clang_format#auto_format_on_insert_leave=0
 
 
 " 插件
@@ -169,6 +127,8 @@ let g:VM_maps = {}
 let g:VM_maps["Select All"] = '\a'
 
 Plug 'morhetz/gruvbox'
+
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
