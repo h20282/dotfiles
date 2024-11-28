@@ -17,12 +17,6 @@ inline void print(const char *format, const First &first, const Rest &...rest) {
     print(format + 2, rest...);
 }
 
-template <typename... Args>
-inline void println(const Args &...args) {
-    print(args...);
-    print('\n');
-}
-
 #define println(...)    \
     print(__VA_ARGS__); \
     print('\n');
