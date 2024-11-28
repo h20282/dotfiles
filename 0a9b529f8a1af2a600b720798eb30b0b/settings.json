@@ -231,7 +231,8 @@
                 "cursorShape": "filledBox",
                 "font": 
                 {
-                    "size": 12
+                    "face": "MesloLGSDZ NF",
+                    "size": 14
                 },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
