@@ -1,5 +1,7 @@
 ﻿
 Import-Module posh-git
+Import-Module VSSetup
+Import-Module Pscx
 
 function gst { git status }
 
