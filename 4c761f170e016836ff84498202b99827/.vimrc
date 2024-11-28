@@ -1,7 +1,9 @@
 set hls
 set nu
 hi MatchParen ctermbg=Blue guibg=lightblue
-hi Search ctermbg=237
+hi Search ctermbg=220
+
+set fencs=utf-8,gbk,utf-16,utf-32,ucs-bom
 
 
 set ts=4
