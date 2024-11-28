@@ -129,5 +129,5 @@ alias gst='git status'
 alias gdf='git diff'
 alias glg='git log --oneline'
 
-alias cmakeb='cmake --build ./'
+alias cmkb='cmake --build ./'
 
