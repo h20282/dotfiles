@@ -130,7 +130,7 @@
         },
         {
             "command": "closePane",
-            "keys": "ctrl+w"
+            "keys": "alt+w"
         },
         {
             "command": 
