@@ -50,5 +50,16 @@ map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 
 map <F4> :A <CR>
-map <F5> :!g++ -std=c++11 %; ./a.out;<CR>
-inoremap <C-j> <ESC>
+map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
+inoremap jk <ESC>
+map <C-k> :ClangFormat<CR>
+let g:clang_format#auto_format_on_insert_leave=0
+
+
+" 插件
+call plug#begin('~/.vim/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ 
+call plug#end()
+source ~/.vim/config/plugin/coc.vim
