@@ -177,6 +177,7 @@ Plug 'tpope/vim-commentary'
 autocmd FileType c,cpp setlocal commentstring=//\ %s
 
 Plug 'airblade/vim-gitgutter'
+let g:gitgutter_log = 1
 nmap gu :GitGutterUndoHunk<CR>
 nmap gt :GitGutterLineHighlightsToggle<CR>
 nmap gs :GitGutterStageHunk<CR>
@@ -233,7 +234,20 @@ Plug 'jakar/vim-python-syntax'
 let python_highlight_all = 1
 
 Plug 'fidian/hexmode'
-let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.png,*.jpg,*.wav,*.pcm,*.obj,*.dll'
+let g:hexmode_patterns = '*.bin,*.exe,*.dat,*.o,*.png,*.jpg,*.wav,*.pcm,*.obj,*.dll,*.aac,*.mp4,*.pdb'
+
+" Plug 'godlygeek/tabular'
+" Plug 'preservim/vim-markdown'
+Plug 'dhruvasagar/vim-table-mode'
+
+Plug 'junegunn/vim-easy-align'
+
+Plug 'funorpain/vim-cpplint'
+" Press <F7> to run cpplint.py on it
+
+
+Plug 'maurges/vim-cpp-helper'
+nmap <leader>i :Implement<CR>
 
 call plug#end()
 if has_key(plugs, 'coc.nvim')
