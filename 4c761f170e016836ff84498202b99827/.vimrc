@@ -112,7 +112,7 @@ let g:floaterm_height=0.9
 if has('win32')
     let g:floaterm_shell = 'powershell'
 else
-    let g:floaterm_shell = 'bash'
+    let g:floaterm_shell = 'zsh'
 endif
 let g:floaterm_keymap_toggle = '<c-n>'
 
