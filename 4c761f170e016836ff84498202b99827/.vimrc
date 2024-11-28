@@ -134,8 +134,15 @@ let g:floaterm_keymap_toggle = '<c-n>'
 
 Plug 'tpope/vim-surround'
 
+Plug 'norcalli/nvim-colorizer.lua'
+
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
 
 lua require'nvim-tree'.setup {}
+
+set termguicolors
+" -- Attaches to every FileType mode
+cnoreabbrev C ColorizerToggle
+lua require'colorizer'.setup {}
