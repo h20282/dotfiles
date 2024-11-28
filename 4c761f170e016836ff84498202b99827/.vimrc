@@ -29,7 +29,10 @@ set clipboard+=unnamedplus
 " 复制到Windows剪切板
 vmap ;y : !/mnt/c/Windows/System32/clip.exe<cr>u''
 
-let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格式化
+if has('win32')
+    " 在Linux下打开该选项会导致括号回车异常
+    let g:clang_format#auto_format_on_insert_leave=1	"退出插入模式时自动格式化
+endif
 
 " 文件树
 map <F3> :NvimTreeToggle<CR>
@@ -122,6 +125,8 @@ Plug 'peterhoeg/vim-qml'
 
 " Comment/Uncomment
 Plug 'tpope/vim-commentary'
+" 设置C语言和C++的注释格式为//开头的单行注释
+autocmd FileType c,cpp setlocal commentstring=//\ %s
 
 Plug 'airblade/vim-gitgutter'
 nmap gu :GitGutterUndoHunk<CR>
