@@ -1,6 +1,7 @@
 set hls
 set nu
 hi MatchParen ctermbg=Blue guibg=lightblue
+hi Search ctermbg=237
 
 
 set ts=4
