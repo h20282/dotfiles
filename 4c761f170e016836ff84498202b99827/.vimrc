@@ -135,8 +135,8 @@ nmap gn :GitGutterNextHunk<CR>
 nmap gN :GitGutterPrevHunk<CR>
 set updatetime=100
 
-" " maybe not used
-" Plug 'tpope/vim-fugitive'
+" for gv.vim
+Plug 'tpope/vim-fugitive'
 
 " view git history
 Plug 'junegunn/gv.vim'
