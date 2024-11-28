@@ -42,6 +42,10 @@ map <F3> :NvimTreeToggle<CR>
 map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
 
 inoremap jk <ESC>
+inoremap <C-b> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-f> <Right>
 vnoremap H ^
 vnoremap L $
 nnoremap H ^
