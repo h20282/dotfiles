@@ -140,13 +140,33 @@ if has('win32')
 else
     let g:floaterm_shell = 'zsh'
 endif
-let g:floaterm_keymap_toggle = '<c-n>'
+let g:floaterm_keymap_toggle = '<c-q>'
 
 Plug 'tpope/vim-surround'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
 Plug 'peterhoeg/vim-qml'
+
+Plug 'tpope/vim-commentary'
+
+Plug 'airblade/vim-gitgutter'
+nmap gu :GitGutterUndoHunk<CR>
+set updatetime=100
+
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+
+Plug 'easymotion/vim-easymotion'
+nmap s <Plug>(easymotion-s2)
+
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+let g:VM_theme='olive'
+let g:VM_leader='\'
+let g:VM_maps = {}
+let g:VM_maps["Select All"] = '\a'
+
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
@@ -158,3 +178,4 @@ set termguicolors
 " -- Attaches to every FileType mode
 cnoreabbrev C ColorizerToggle
 lua require'colorizer'.setup {}
+colo gruvbox

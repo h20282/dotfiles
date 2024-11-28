@@ -166,13 +166,6 @@
         {
             "command": 
             {
-                "action": "newTab"
-            },
-            "keys": "ctrl+t"
-        },
-        {
-            "command": 
-            {
                 "action": "newWindow"
             }
         },
