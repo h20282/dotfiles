@@ -4,31 +4,11 @@ Import-Module VSSetup
 Import-Module Pscx
 Import-Module PSReadLine
 
-function gst { git status }
-
-function gd { git diff }
-
-function gcmi($msg){
-    git commit -m $msg
-}
-
 function glg($num_log) {
     if ($num_log -eq $null) {
         $num_log = 10;
     }
     git log --oneline -n $num_log
-}
-
-function gaa(){
-    git add --all
-}
-
-function gds(){
-    git diff --staged
-}
-
-function gcma(){
-    git commit -a;
 }
 
 function amend(){
