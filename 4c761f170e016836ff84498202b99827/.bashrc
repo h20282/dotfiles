@@ -131,3 +131,5 @@ alias glg='git log --oneline'
 
 alias cmkb='cmake --build ./'
 
+source ~/git-prompt.sh
+export PROMPT_COMMAND=$PROMPT_COMMAND'__posh_git_ps1 "\u@\h:\w " "\\\$ ";'
