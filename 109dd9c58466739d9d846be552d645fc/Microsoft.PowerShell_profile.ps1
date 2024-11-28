@@ -2,6 +2,7 @@
 Import-Module posh-git
 Import-Module VSSetup
 Import-Module Pscx
+Import-Module PSReadLine
 
 function gst { git status }
 
@@ -59,3 +60,14 @@ if (!(Test-Path($zlua_path)))
 }
 
 Invoke-Expression (& { (lua $zlua_path --init powershell) -join "`n" })
+
+Set-PSReadLineOption -PredictionSource History
+
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+Set-PSReadLineOption -Colors @{ InlinePrediction = '#875f5f'}
+
+
+Set-PSReadLineKeyHandler -Chord "Ctrl+RightArrow" -Function ForwardWord
