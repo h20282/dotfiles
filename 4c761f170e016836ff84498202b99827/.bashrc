@@ -127,7 +127,7 @@ export PATH=$PATH:/home/ice/.local/bin
 # my aliases
 alias gst='git status'
 alias gd='git diff'
-alias glg='git log --oneline'
+alias glg='git log --oneline -n 10'
 alias gaa='git add --all'
 alias gds='git diff --staged'
 
