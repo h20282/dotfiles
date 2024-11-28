@@ -67,9 +67,3 @@ dotfiles:
       path: ~/.vimfiles/template.cpp
     windows:
       path: ~\.vimfiles\template.cpp
-  fd400e5abb640b86568030d59ffbb159/acp.vim:
-    linux:
-      path: ~/.vim/plugin/acp.vim
-  fd400e5abb640b86568030d59ffbb159/clang_format.vim:
-    linux:
-      path: ~/.vim/plugin/clang_format.vim
