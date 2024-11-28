@@ -62,12 +62,10 @@ if (!(Test-Path($zlua_path)))
 Invoke-Expression (& { (lua $zlua_path --init powershell) -join "`n" })
 
 Set-PSReadLineOption -PredictionSource History
-
+Set-PSReadLineOption -Colors @{ InlinePrediction = '#2a6b3f'}
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
-Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 
-Set-PSReadLineOption -Colors @{ InlinePrediction = '#875f5f'}
-
-
+Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
+Set-PSReadLineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+RightArrow" -Function ForwardWord
