@@ -13,7 +13,10 @@ set expandtab
 set autoindent
 set mouse=a
 
+set clipboard+=unnamedplus
 
+
+colo desert
 
 autocmd BufNewFile *.cpp 0r ~/.vimfiles/template.cpp
 autocmd BufNewFile conanfile.txt 0r ~/.vimfiles/conanfile.txt
