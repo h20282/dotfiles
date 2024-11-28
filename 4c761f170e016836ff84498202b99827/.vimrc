@@ -47,3 +47,5 @@ map <F3> :NERDTreeMirror<CR>
 map <F3> :NERDTreeToggle<CR>
 
 map <F4> :A <CR>
+map <F5> :!g++ -std=c++11 %; ./a.out;<CR>
+inoremap <C-j> <ESC>
