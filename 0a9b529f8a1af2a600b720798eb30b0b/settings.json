@@ -318,6 +318,7 @@
     {
         "defaults": 
         {
+            "bellStyle": "none",
             "colorScheme": "Campbell",
             "cursorShape": "filledBox",
             "font": 
