@@ -17,3 +17,8 @@ export PATH=$PATH:/home/ice/.local/bin
 function replace {
     find . -name '*.h' -or -name '*.cpp'  | xargs sed -i $1
 }
+
+if [ ! -f ~/z.sh ]; then
+    wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+fi
+source ~/z.sh
