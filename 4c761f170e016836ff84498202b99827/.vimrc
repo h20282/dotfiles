@@ -78,6 +78,8 @@ map <F3> :NvimTreeToggle<CR>
 map <F4> :A <CR>
 map <F5> :w<ESC>:!rm a.out;clear; g++ -std=c++11 % -lmysqlclient; ./a.out;<CR>
 inoremap jk <ESC>
+vnoremap H ^
+vnoremap L $
 nnoremap H ^
 nnoremap L $
 map <C-h> <C-w>h
@@ -158,7 +160,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
 Plug 'easymotion/vim-easymotion'
-nmap s <Plug>(easymotion-s2)
+nmap gs <Plug>(easymotion-s2)
 
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 let g:VM_theme='olive'
