@@ -118,6 +118,8 @@ else
 endif
 let g:floaterm_keymap_toggle = '<c-n>'
 
+Plug 'tpope/vim-surround'
+
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
