@@ -137,8 +137,6 @@ Plug 'tpope/vim-surround'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
-Plug 'overcache/NeoSolarized'
-
 call plug#end()
 source ~/.vim/config/plugin/coc.vim
 map <M-m> :MarkdownPreview<CR>
@@ -149,4 +147,3 @@ set termguicolors
 " -- Attaches to every FileType mode
 cnoreabbrev C ColorizerToggle
 lua require'colorizer'.setup {}
-colorscheme NeoSolarized
