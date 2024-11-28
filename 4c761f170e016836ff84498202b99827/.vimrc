@@ -118,6 +118,7 @@ if has("nvim")
     Plug 'nvim-lua/plenary.nvim' | Plug 'nvim-telescope/telescope.nvim'
     nnoremap <Space>f :Telescope find_files<CR>
     nnoremap <Space>s :Telescope grep_string<CR>
+    nnoremap <Space><Space> :Telescope<CR>
 endif
 
 Plug 'voldikss/vim-floaterm'
