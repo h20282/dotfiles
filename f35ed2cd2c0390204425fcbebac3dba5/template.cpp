@@ -23,6 +23,10 @@ inline void println(const Args &...args) {
     print('\n');
 }
 
+#define println(...)    \
+    print(__VA_ARGS__); \
+    print('\n');
+
 int main() {
     print("{}, {}\n", "hello", "world");
     return 0;
