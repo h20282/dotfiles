@@ -12,6 +12,8 @@ antigen use oh-my-zsh
 antigen theme agnoster
 
 antigen bundle git
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
 
 
 antigen apply
