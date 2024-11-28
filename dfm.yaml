@@ -32,9 +32,13 @@ dotfiles:
     linux:
       path: ~/.zshrc
   941b30d1b9151621491c82b8f0950a97/init.vim:
+    linux:
+      path: ~/.config/nvim/init.vim
     windows:
       path: ~\AppData\Local\nvim\init.vim
   b036057cc962924abd62de51a07bad81/coc.vim:
+    linux:
+      path: ~/.vim/config/plugin/coc.vim
     windows:
       path: ~\.vim\config\plugin\coc.vim
   ccfa602987093389c79998baa521439e/keybindings.json:
