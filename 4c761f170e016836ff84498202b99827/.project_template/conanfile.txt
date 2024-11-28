@@ -1,5 +1,5 @@
 [requires]
-fmt/8.0.1
+fmt/6.2.0
 
 [generators]
 cmake
