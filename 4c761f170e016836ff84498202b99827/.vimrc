@@ -249,6 +249,12 @@ Plug 'funorpain/vim-cpplint'
 Plug 'maurges/vim-cpp-helper'
 nmap <leader>i :Implement<CR>
 
+" html/css/js formater
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'json', 'markdown', 'vue', 'yaml', 'html'] }
+
 call plug#end()
 if has_key(plugs, 'coc.nvim')
     source ~/.vim/config/plugin/coc.vim
