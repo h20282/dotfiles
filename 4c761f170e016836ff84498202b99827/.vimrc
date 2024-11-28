@@ -13,6 +13,8 @@ set autoindent
 
 
 autocmd BufNewFile *.cpp 0r ~/.vimfiles/template.cpp
+autocmd BufNewFile conanfile.txt 0r ~/.vimfiles/conanfile.txt
+autocmd BufNewFile CMakeLists.txt 0r ~/.vimfiles/CMakeLists.txt
 
 
 inoremap ( ()<Esc>i
