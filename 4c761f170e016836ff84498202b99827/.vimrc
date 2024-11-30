@@ -93,6 +93,8 @@ map <C-k> :call CocAction("format")<CR>
 map <C-Right> <C-W>>
 map <C-Left> <C-W><
 
+nnoremap <C-m> :
+
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-h> <Left>
